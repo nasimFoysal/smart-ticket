@@ -1,4 +1,4 @@
-let selectedSeats = [];
+const selectedSeats = [];
 const pricePerSeat = 550;
 
 document.getElementById('seats-container').addEventListener('click', (e)=>{
@@ -10,9 +10,8 @@ document.getElementById('seats-container').addEventListener('click', (e)=>{
     if(selectedSeats.length < 4 && ifSeat && !isSelected){
         // push to array
         selectedSeats.push(clickedSeat.innerText);
-        // -------
-        clickedSeat.classList.add('my-transition')
 
+        clickedSeat.classList.add('my-transition')
 
         // changing bg
         clickedSeat.classList.add('bg-[#1dd100]', 'text-white');
@@ -74,11 +73,9 @@ document.getElementById('seats-container').addEventListener('click', (e)=>{
     if(isSelected && selectedSeats.length !== 4){
         alert('You have already Selected this seat')
     }
-    
-    
-
-    console.log(selectedSeats);
 })
+
+
 
 //apply coupon button
 document.getElementById('apply-coupon-btn').addEventListener('click', (e)=>{
@@ -119,23 +116,3 @@ document.getElementById('apply-coupon-btn').addEventListener('click', (e)=>{
 
     
 })
-
-
-
-// if(couponInput === coupon || couponInput === coupleCoupon){
-//     document.getElementById('apply-container').classList.add('hidden');
-//     // -----
-//     const currentTotalPrice = parseInt(document.getElementById('total-price').innerText);
-//     let discount = 0;
-//     if(couponInput === coupon){
-//         discount = currentTotalPrice * .15;
-//     } else if(couponInput === coupleCoupon){
-//         discount = currentTotalPrice * .20;
-
-//     }
-//     document.getElementById('discount-container').classList.remove('hidden');
-//     document.getElementById('discount').innerText = discount.toFixed(2);
-
-//     const grandTotal = currentTotalPrice - discount;
-//     document.getElementById('grand-total').innerText = grandTotal.toFixed(2);
-// }
