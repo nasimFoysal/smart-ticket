@@ -1,13 +1,13 @@
 let selectedSeats = [];
-
-const coupon = "NEW15";
-const coupleCoupon = "Couple 20";
 const pricePerSeat = 550;
 
 document.getElementById('seats-container').addEventListener('click', (e)=>{
     const clickedSeat = e.target;
 
-    if(selectedSeats.length < 4 && clickedSeat.classList.contains('seat')){
+    const ifSeat = clickedSeat.classList.contains('seat');
+    const isSelected = selectedSeats.includes(clickedSeat.innerText);
+
+    if(selectedSeats.length < 4 && ifSeat && !isSelected){
         // push to array
         selectedSeats.push(clickedSeat.innerText)
 
@@ -51,6 +51,18 @@ document.getElementById('seats-container').addEventListener('click', (e)=>{
         const grandTotal = document.getElementById('grand-total');
         grandTotal.innerText = totalPrice.toFixed(2);
 
+        // check if apply btn should be enabled
+        const applyBtn = document.getElementById('apply-coupon-btn');
+        if(selectedSeats.length === 4){
+            applyBtn.removeAttribute('disabled', false);
+        }
+
+        // check if next btn should be enabled
+        const phoneNumber = document.getElementById('passenger-phone-number').value;
+        if(phoneNumber){
+            nextBtnEnable();
+        }
+
     }
     
     
@@ -58,22 +70,35 @@ document.getElementById('seats-container').addEventListener('click', (e)=>{
     console.log(selectedSeats);
 })
 
-// coupon button
+//apply coupon button
 document.getElementById('apply-coupon-btn').addEventListener('click', (e)=>{
+    const coupon = document.getElementById('coupon-code').innerText;
+    const coupleCoupon = document.getElementById('couple-coupon-code').innerText;
+
     const couponInput = document.getElementById('coupon-field').value;
 
+   
     if(couponInput === coupon || couponInput === coupleCoupon){
         document.getElementById('apply-container').classList.add('hidden')
     }
     const currentTotalPrice = parseInt(document.getElementById('total-price').innerText);
     let discount = 0;
     if(couponInput === coupon){
-         discount = currentTotalPrice * .15;
+            discount = currentTotalPrice * .15;
     } else if(couponInput === coupleCoupon){
         discount = currentTotalPrice * .20;
 
     }
+    document.getElementById('discount-container').classList.remove('hidden');
+    document.getElementById('discount').innerText = discount.toFixed(2);
+
+
+
     const grandTotal = currentTotalPrice - discount;
     document.getElementById('grand-total').innerText = grandTotal.toFixed(2);
+
     
 })
+
+
+
