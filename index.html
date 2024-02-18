@@ -54,7 +54,6 @@
             </div>
 
         </nav>
-
         <!-- navbar ends -->
 
         <!-- banner starts -->
@@ -69,21 +68,24 @@
                         adipisicing elit. Quibusdam,
                         saepe ut soluta minima iure facilis odio accusamus fugit repellendus?</p>
                 </div>
-                <button class="px-6 py-[10px] bg-[#1DD100]  rounded-xl font-bold text-[18px]">
-                    Buy Tickets
-                </button>
+                <div>
+                    <a href="#ticket-section">
+                        <button class="px-6 py-[10px] bg-[#1DD100]  rounded-xl font-bold text-[18px]">
+                            Buy Tickets
+                        </button>
+                    </a>
+                </div>
 
             </div>
         </div>
-
         <!-- banner ends -->
-
     </header>
     <!-- header ends -->
 
+
+
     <!-- main starts -->
     <main>
-
         <!-- best offer starts -->
         <section class="container mx-auto px-2 lg:px-7 my-[100px]  font-inter ">
             <div class="text-center mb-9">
@@ -138,7 +140,7 @@
 
 
         <!-- ticket section starts -->
-        <section class="container my-24 bg-[#F7F8F8]">
+        <section id="ticket-section" class="container my-24 bg-[#F7F8F8]">
             <div class="text-center mx-auto border-t-2 rounded-t-[70px] border-t-[#1dd100] mb-10">
                 <h1 class="text-2xl lg:text-4xl mb-3 lg:mb-5 font-bold mt-[60px] lg:mt-24">P.H Paribahan</h1>
                 <p class="w-[80%] lg:w-[60%] mx-auto text-[#03071299]">Lorem ipsum dolor, sit amet consectetur
@@ -147,24 +149,24 @@
             </div>
             <!-- top ticket part -->
             <div class="px-6">
-                <div class="flex  px-2 lg:px-7 bg-white rounded-[24px]">
-                    <div class="w-[80%] p-3 lg:p-7">
+                <div class="flex flex-col lg:flex-row  px-2 lg:px-7 bg-white rounded-[24px]">
+                    <div class="lg:w-[80%] p-3 lg:p-7">
                         <div class="flex items-center justify-between">
                             <div class="flex items-center gap-4">
                                 <div>
                                     <img src="./images/bus-logo.png" alt="">
                                 </div>
                                 <div>
-                                    <h2 class="text-3xl font-bold">GreenLine Paribahan</h2>
-                                    <p class="text-[#03071299] text-lg">Coach-009-WEB ! AC_Business</p>
+                                    <h2 class="text-xl lg:text-3xl font-bold">GreenLine Paribahan</h2>
+                                    <p class="text-[#03071299] lg:text-lg">Coach-009-WEB ! AC_Business</p>
 
                                 </div>
 
                             </div>
                             <div
-                                class="flex items-center gap-2 text-[#1dd100] bg-[#1dd10026] rounded-lg p-3 text-[18px] font-semibold">
+                                class="flex flex-col lg:flex-row items-center gap-2 text-[#1dd100] bg-[#1dd10026] rounded-lg p-3  lg:text-[18px] font-semibold">
                                 <img src="./images/seat-green.png" alt="">
-                                <p><span>40</span> Seats left</p>
+                                <p><span id="seats-left">40</span> Seats left</p>
                             </div>
 
                         </div>
@@ -182,25 +184,23 @@
 
                             </div>
                             <hr class="border-dashed border-[1px] border-[#03071233]">
-                            <div class="flex items-center justify-between gap-5 font-medium">
-                                <div class="bg-[#0307120c] text-[#030712cc] rounded-xl py-4 px-8 font-medium">Boarding
+                            <div class="flex flex-col lg:flex-row items-center justify-between gap-5 font-semibold text-center text-[#030712cc]">
+                                <div class="bg-[#0307120c]  rounded-xl p-4  flex-1">Boarding
                                     Point - Laxmipur</div>
-                                <div class="bg-[#0307120c] text-[#030712cc] rounded-xl py-4 px-8 font-medium">Dropping
+                                <div class="bg-[#0307120c] rounded-xl p-4  flex-1">Dropping
                                     Point - Bogura</div>
-                                <div class="bg-[#0307120c] text-[#030712cc] rounded-xl py-4 px-8 font-medium">Est. Time
+                                <div class="bg-[#0307120c]  rounded-xl p-4  flex-1" >Est. Time
                                     - 11 Hour</div>
                             </div>
 
                         </div>
 
 
-
-
                     </div>
-                    <div>
+                    <div class="hidden lg:flex">
                         <img src="./images/info-devider.png" alt="">
                     </div>
-                    <div class="flex flex-col items-center justify-center w-[20%] space-y-5">
+                    <div class="flex flex-col items-center justify-center lg:w-[20%] space-y-5">
                         <div>
                             <img src="./images/fare.png" alt="">
                         </div>
@@ -239,18 +239,19 @@
     
                         </div>
                         <!-- seats -->
-                        <div class="text-[#0307127f] text-lg font-medium font-inter">
+                        <div id="seats-container" class="text-[#0307127f] text-lg font-medium font-inter">
+                            <!-- A -->
                             <div class="flex items-center justify-between mt-6 ">
                                 <div class="w-full text-end mr-5">
                                     <p>A</p>
                                 </div>
-                                <div class=" flex items-center gap-7 mr-20">
-                                    <P id="A1" class="py-3 px-10 rounded-xl bg-[#f7f8f8] flex-1">A1</P>
-                                    <P id="A2" class="py-3 px-10 rounded-xl bg-[#f7f8f8] flex-1">A2</P>
+                                <div class=" flex items-center gap-7 mr-5 lg:mr-20">
+                                    <p id="A1" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8] flex-1">A1</p>
+                                    <p id="A2" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8] flex-1">A2</p>
                                 </div>
                                 <div class="flex items-center gap-7">
-                                    <P id="A3" class="py-3 px-10 rounded-xl bg-[#f7f8f8]">A3</P>
-                                    <P id="A4" class="py-3 px-10 rounded-xl bg-[#f7f8f8]">A4</P>
+                                    <p id="A3" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8]">A3</p>
+                                    <p id="A4" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8]">A4</p>
                                 </div>
                             </div>
                             <!-- B -->
@@ -258,13 +259,13 @@
                                 <div class="w-full text-end mr-5">
                                     <p>B</p>
                                 </div>
-                                <div class=" flex items-center gap-7 mr-20">
-                                    <P id="B1" class="py-3 px-10 rounded-xl bg-[#f7f8f8] flex-1">B1</P>
-                                    <P id="B2" class="py-3 px-10 rounded-xl bg-[#f7f8f8] flex-1">B2</P>
+                                <div class=" flex items-center gap-7 mr-5 lg:mr-20">
+                                    <p id="B1" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8] flex-1">B1</p>
+                                    <p id="B2" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8] flex-1">B2</p>
                                 </div>
                                 <div class="flex items-center gap-7">
-                                    <P id="B3" class="py-3 px-10 rounded-xl bg-[#f7f8f8]">B3</P>
-                                    <P id="B4" class="py-3 px-10 rounded-xl bg-[#f7f8f8]">B4</P>
+                                    <p id="B3" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8]">B3</p>
+                                    <p id="B4" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8]">B4</p>
                                 </div>
                             </div>
                             <!-- C -->
@@ -272,13 +273,13 @@
                                 <div class="w-full text-end mr-5">
                                     <p>C</p>
                                 </div>
-                                <div class=" flex items-center gap-7 mr-20">
-                                    <P id="C1" class="py-3 px-10 rounded-xl bg-[#f7f8f8] flex-1">C1</P>
-                                    <P id="C2" class="py-3 px-10 rounded-xl bg-[#f7f8f8] flex-1">C2</P>
+                                <div class=" flex items-center gap-7 mr-5 lg:mr-20">
+                                    <p id="C1" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8] flex-1">C1</p>
+                                    <p id="C2" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8] flex-1">C2</p>
                                 </div>
                                 <div class="flex items-center gap-7">
-                                    <P id="C3" class="py-3 px-10 rounded-xl bg-[#f7f8f8]">C3</P>
-                                    <P id="C4" class="py-3 px-10 rounded-xl bg-[#f7f8f8]">C4</P>
+                                    <p id="C3" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8]">C3</p>
+                                    <p id="C4" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8]">C4</p>
                                 </div>
                             </div>
                             <!-- D -->
@@ -286,13 +287,13 @@
                                 <div class="w-full text-end mr-5">
                                     <p>D</p>
                                 </div>
-                                <div class=" flex items-center gap-7 mr-20">
-                                    <P id="D1" class="py-3 px-10 rounded-xl bg-[#f7f8f8] flex-1">D1</P>
-                                    <P id="D2" class="py-3 px-10 rounded-xl bg-[#f7f8f8] flex-1">D2</P>
+                                <div class=" flex items-center gap-7 mr-5 lg:mr-20">
+                                    <p id="D1" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8] flex-1">D1</p>
+                                    <p id="D2" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8] flex-1">D2</p>
                                 </div>
                                 <div class="flex items-center gap-7">
-                                    <P id="D3" class="py-3 px-10 rounded-xl bg-[#f7f8f8]">D3</P>
-                                    <P id="D4" class="py-3 px-10 rounded-xl bg-[#f7f8f8]">D4</P>
+                                    <p id="D3" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8]">D3</p>
+                                    <p id="D4" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8]">D4</p>
                                 </div>
                             </div>
                             <!-- E -->
@@ -300,13 +301,13 @@
                                 <div class="w-full text-end mr-5">
                                     <p>E</p>
                                 </div>
-                                <div class=" flex items-center gap-7 mr-20">
-                                    <P id="E1" class="py-3 px-10 rounded-xl bg-[#f7f8f8] flex-1">E1</P>
-                                    <P id="E2" class="py-3 px-10 rounded-xl bg-[#f7f8f8] flex-1">E2</P>
+                                <div class=" flex items-center gap-7 mr-5 lg:mr-20">
+                                    <p id="E1" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8] flex-1">E1</p>
+                                    <p id="E2" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8] flex-1">E2</p>
                                 </div>
                                 <div class="flex items-center gap-7">
-                                    <P id="E3" class="py-3 px-10 rounded-xl bg-[#f7f8f8]">E3</P>
-                                    <P id="E4" class="py-3 px-10 rounded-xl bg-[#f7f8f8]">E4</P>
+                                    <p id="E3" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8]">E3</p>
+                                    <p id="E4" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8]">E4</p>
                                 </div>
                             </div>
                             <!-- F -->
@@ -314,13 +315,13 @@
                                 <div class="w-full text-end mr-5">
                                     <p>F</p>
                                 </div>
-                                <div class=" flex items-center gap-7 mr-20">
-                                    <P id="F1" class="py-3 px-10 rounded-xl bg-[#f7f8f8] flex-1">F1</P>
-                                    <P id="F2" class="py-3 px-10 rounded-xl bg-[#f7f8f8] flex-1">F2</P>
+                                <div class=" flex items-center gap-7 mr-5 lg:mr-20">
+                                    <p id="F1" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8] flex-1">F1</p>
+                                    <p id="F2" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8] flex-1">F2</p>
                                 </div>
                                 <div class="flex items-center gap-7">
-                                    <P id="F3" class="py-3 px-10 rounded-xl bg-[#f7f8f8]">F3</P>
-                                    <P id="F4" class="py-3 px-10 rounded-xl bg-[#f7f8f8]">F4</P>
+                                    <p id="F3" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8]">F3</p>
+                                    <p id="F4" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8]">F4</p>
                                 </div>
                             </div>
                             <!-- G -->
@@ -328,13 +329,13 @@
                                 <div class="w-full text-end mr-5">
                                     <p>G</p>
                                 </div>
-                                <div class=" flex items-center gap-7 mr-20">
-                                    <P id="G1" class="py-3 px-10 rounded-xl bg-[#f7f8f8] flex-1">G1</P>
-                                    <P id="G2" class="py-3 px-10 rounded-xl bg-[#f7f8f8] flex-1">G2</P>
+                                <div class=" flex items-center gap-7 mr-5 lg:mr-20">
+                                    <p id="G1" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8] flex-1">G1</p>
+                                    <p id="G2" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8] flex-1">G2</p>
                                 </div>
                                 <div class="flex items-center gap-7">
-                                    <P id="G3" class="py-3 px-10 rounded-xl bg-[#f7f8f8]">G3</P>
-                                    <P id="G4" class="py-3 px-10 rounded-xl bg-[#f7f8f8]">G4</P>
+                                    <p id="G3" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8]">G3</p>
+                                    <p id="G4" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8]">G4</p>
                                 </div>
                             </div>
                             <!-- H -->
@@ -342,13 +343,13 @@
                                 <div class="w-full text-end mr-5">
                                     <p>H</p>
                                 </div>
-                                <div class=" flex items-center gap-7 mr-20">
-                                    <P id="H1" class="py-3 px-10 rounded-xl bg-[#f7f8f8] flex-1">H1</P>
-                                    <P id="H2" class="py-3 px-10 rounded-xl bg-[#f7f8f8] flex-1">H2</P>
+                                <div class=" flex items-center gap-7 mr-5 lg:mr-20">
+                                    <p id="H1" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8] flex-1">H1</p>
+                                    <p id="H2" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8] flex-1">H2</p>
                                 </div>
                                 <div class="flex items-center gap-7">
-                                    <P id="H3" class="py-3 px-10 rounded-xl bg-[#f7f8f8]">H3</P>
-                                    <P id="H4" class="py-3 px-10 rounded-xl bg-[#f7f8f8]">H4</P>
+                                    <p id="H3" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8]">H3</p>
+                                    <p id="H4" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8]">H4</p>
                                 </div>
                             </div>
                             <!-- I -->
@@ -356,13 +357,13 @@
                                 <div class="w-full text-end mr-5">
                                     <p>I</p>
                                 </div>
-                                <div class=" flex items-center gap-7 mr-20">
-                                    <P id="I1" class="py-3 px-10 rounded-xl bg-[#f7f8f8] flex-1">I1</P>
-                                    <P id="I2" class="py-3 px-10 rounded-xl bg-[#f7f8f8] flex-1">I2</P>
+                                <div class=" flex items-center gap-7 mr-5 lg:mr-20">
+                                    <p id="I1" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8] flex-1">I1</p>
+                                    <p id="I2" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8] flex-1">I2</p>
                                 </div>
                                 <div class="flex items-center gap-7">
-                                    <P id="I3" class="py-3 px-10 rounded-xl bg-[#f7f8f8]">I3</P>
-                                    <P id="I4" class="py-3 px-10 rounded-xl bg-[#f7f8f8]">I4</P>
+                                    <p id="I3" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8]">I3</p>
+                                    <p id="I4" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8]">I4</p>
                                 </div>
                             </div>
                             <!-- J -->
@@ -370,13 +371,13 @@
                                 <div class="w-full text-end mr-5">
                                     <p>J</p>
                                 </div>
-                                <div class=" flex items-center gap-7 mr-20">
-                                    <P id="J1" class="py-3 px-10 rounded-xl bg-[#f7f8f8] flex-1">J1</P>
-                                    <P id="J2" class="py-3 px-10 rounded-xl bg-[#f7f8f8] flex-1">J2</P>
+                                <div class=" flex items-center gap-7 mr-5 lg:mr-20">
+                                    <p id="J1" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8] flex-1">J1</p>
+                                    <p id="J2" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8] flex-1">J2</p>
                                 </div>
                                 <div class="flex items-center gap-7">
-                                    <P id="J3" class="py-3 px-10 rounded-xl bg-[#f7f8f8]">J3</P>
-                                    <P id="J4" class="py-3 px-10 rounded-xl bg-[#f7f8f8]">J4</P>
+                                    <p id="J3" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8]">J3</p>
+                                    <p id="J4" class="py-3 px-3 seat lg:px-10 rounded-xl bg-[#f7f8f8]">J4</p>
                                 </div>
                             </div>
                             
@@ -386,18 +387,18 @@
                     <!-- seat selection ends -->
     
                     <!-- fare calculation starts -->
-                    <div class="lg:w-[40%] p-7">
+                    <div class="lg:w-[40%] lg:p-7 mt-4">
                         <h2 class="font-semibold text-2xl">Selected Seats</h2>
                         <hr class="border-dashed border-[1px] my-4">
                         <div class="calculation-area p-7 bg-[#F7F8F8] rounded-[18px]">
                             <div class="flex justify-between font-semibold">
-                                <div>Seat<span id="no-of-seats" class="bg-[#1DD100] px-2 text-white rounded-xl">2</span></div>
+                                <div>Seat<span id="no-of-selected-seats" class="bg-[#1DD100] px-2 text-white rounded-xl">0</span></div>
                                 <div>Class</div>
                                 <div>Price</div>
                             </div>
                             <hr class="border-dashed border-[1px] my-4">
-                            <div class="space-y-4">
-                                <div class="flex justify-between">
+                            <div id="selected-seat-details" class="space-y-4">
+                                <!-- <div class="flex justify-between">
                                     <div>C2</div>
                                     <div>Economy</div>
                                     <div>550</div>
@@ -406,26 +407,26 @@
                                     <div>C2</div>
                                     <div>Economy</div>
                                     <div>550</div>
-                                </div>
+                                </div> -->
                             </div>
                             <hr class="my-4">
                             <div class="bg-[#f7f8f8] rounded-[22px]">
                                 <div class="flex justify-between font-semibold">
                                     <p>Total Price</p>
-                                    <p>BDT <span id="total-price">1100</span></p>
+                                    <p>BDT <span id="total-price">0</span></p>
                                 </div>
-                                <div class="bg-white rounded-xl p-2 flex justify-between my-4">
+                                <div id="apply-container" class="bg-white rounded-xl p-2 flex justify-between my-4">
                                     <input type="text" name="" id="coupon-field"
                                         class="text-sm text-[#03071299] w-full pl-2" placeholder="Have any copupon?">
-                                    <button
+                                    <button id="apply-coupon-btn" 
                                         class="px-6 py-[10px] bg-[#1DD100] text-white  rounded-xl font-bold text-[18px]">
                                         Apply
                                     </button>
                                 </div>
     
-                                <div class="flex justify-between font-semibold">
+                                <div class="flex justify-between font-semibold mt-4">
                                     <p>Grand Total</p>
-                                    <p>BDT <span id="total-price">1100</span></p>
+                                    <p>BDT <span id="grand-total">0</span></p>
                                 </div>
                             </div>
     
@@ -485,7 +486,7 @@
                             <div><img src="./images/playstore.png" alt=""></div>
                             <div class="text-start">
                                 <p class="text-sm">GET IT ON</p>
-                                <P class="font-bold text-[20px]">Google Play</P>
+                                <P class="font-bold text-[20px]">Google Play</p>
                             </div>
                         </button>
                     </div>
