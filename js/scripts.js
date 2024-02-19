@@ -113,6 +113,4 @@ document.getElementById('apply-coupon-btn').addEventListener('click', (e)=>{
         
        alert('Enter a valid coupon code!');
     }
-
-    
 })

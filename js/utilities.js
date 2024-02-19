@@ -7,3 +7,8 @@ const nextBtnEnable = () =>{
     }
 
 }
+
+// phone navbar
+const phoneNav = () =>{
+    document.getElementById('nav-phone').classList.toggle('hidden');
+}
