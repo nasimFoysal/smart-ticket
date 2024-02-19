@@ -53,10 +53,12 @@ document.getElementById('seats-container').addEventListener('click', (e)=>{
         const grandTotal = document.getElementById('grand-total');
         grandTotal.innerText = totalPrice.toFixed(2);
 
-        // check if apply btn should be enabled
+        // check if apply btn & field should be enabled
         const applyBtn = document.getElementById('apply-coupon-btn');
+        const couponField = document.getElementById('coupon-field');
         if(selectedSeats.length === 4){
             applyBtn.removeAttribute('disabled', false);
+            couponField.removeAttribute('disabled', false);
         }
 
         // check if next btn should be enabled
@@ -83,9 +85,6 @@ document.getElementById('apply-coupon-btn').addEventListener('click', (e)=>{
     const coupleCoupon = document.getElementById('couple-coupon-code').innerText;
 
     const couponInput = document.getElementById('coupon-field').value;
-
-    console.log(couponInput === coupon);
-
 
     if(couponInput){
         if(couponInput === coupon || couponInput === coupleCoupon){
